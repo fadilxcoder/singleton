@@ -1,17 +1,16 @@
 <?php
 
-class Database extends PDO{
+class Database{
 
-    private $_host      = 'localhost';
-    private $_dbname    = 'backoffice';
-    private $_username  = 'root';
+    private $_host      = '';
+    private $_dbname    = '';
+    private $_username  = '';
     private $_password  = '';
     private $_pdo;
     private static $_instance = null;
 
-    public function __construct()
+    private function __construct()
     {
-        //$this->getDBConnection();
         $this->_pdo = new PDO("mysql:host=".$this->_host.";dbname=".$this->_dbname.";charset=utf8", $this->_username, $this->_password);
     }
 
@@ -25,7 +24,7 @@ class Database extends PDO{
     }
 
     public function getConnection()
-  {
-    return $this->_pdo;
-  }
+	{
+		return $this->_pdo;
+	}
 }

@@ -4,15 +4,31 @@
 
 	$instance = new Database();
 	$conn = $instance->getConnection();
-	# var_dump($conn);
-	 
+	var_dump($conn);
+	
 	$instance = new Database();
 	$conn = $instance->getConnection();
-	# var_dump($conn);
-	 
+	var_dump($conn);
+	
 	$instance = new Database();
 	$conn = $instance->getConnection();
-	# var_dump($conn);
+	var_dump($conn);
+	
+	$instance = new Database();
+	$conn = $instance->getConnection();
+	var_dump($conn);
+	
+	$instance = new Database();
+	$conn = $instance->getConnection();
+	var_dump($conn);
+	
+	$instance = new Database();
+	$conn = $instance->getConnection();
+	var_dump($conn);
+	
+	$instance = new Database();
+	$conn = $instance->getConnection();
+	var_dump($conn);
 	
 	/*
 	
@@ -25,32 +41,50 @@
 	C:\wamp64\www\singleton\index.php:15:
 	object(PDO)[1]
 	
+	C:\wamp64\www\singleton\index.php:19:
+	object(PDO)[3]
+	
+	C:\wamp64\www\singleton\index.php:23:
+	object(PDO)[2]
+	
+	C:\wamp64\www\singleton\index.php:27:
+	object(PDO)[4]
+	
+	C:\wamp64\www\singleton\index.php:31:
+	object(PDO)[1]
+
 	*/
-
-	$database = new Database();
 	
-	$instance = $database::getInstance();
-	$conn = $instance->getConnection();
-	# var_dump($conn);
 
-	$instance = $database::getInstance();
+	$instance = Database::getInstance();
 	$conn = $instance->getConnection();
-	# var_dump($conn);
+	var_dump($conn);
 
-	$instance = $database::getInstance();
+	$instance = Database::getInstance();
 	$conn = $instance->getConnection();
-	# var_dump($conn);
+	var_dump($conn);
+
+	$instance = Database::getInstance();
+	$conn = $instance->getConnection();
+	var_dump($conn);
 	
+	$instance = Database::getInstance();
+	$conn = $instance->getConnection();
+	var_dump($conn);
+
 	/*
 	
-	C:\wamp64\www\singleton\index.php:34:
-	object(PDO)[6]
+	C:\wamp64\www\singleton\index.php:61:
+	object(PDO)[2]
 	
-	C:\wamp64\www\singleton\index.php:38:
-	object(PDO)[6]
+	C:\wamp64\www\singleton\index.php:65:
+	object(PDO)[2]
 	
-	C:\wamp64\www\singleton\index.php:42:
-	object(PDO)[6]
+	C:\wamp64\www\singleton\index.php:69:
+	object(PDO)[2]
+	
+	C:\wamp64\www\singleton\index.php:73:
+	object(PDO)[2]
 	
 	*/
 ?>
